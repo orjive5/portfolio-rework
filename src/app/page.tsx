@@ -1,6 +1,6 @@
-import Footer from "@/components/Footer";
-import Tabs from "@/components/Tabs";
-import Profile from "@/components/Profile";
+import Footer from "@/components/footer";
+import Tabs from "@/components/tabs";
+import Profile from "@/components/profile";
 
 export default function Home() {
   return (

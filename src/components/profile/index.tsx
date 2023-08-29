@@ -2,7 +2,7 @@ import { mdiArrowCollapseDown} from '@mdi/js';
 import Icon from '@mdi/react';
 import Image from 'next/image';
 import { Big_Shoulders_Text } from 'next/font/google'
-import SocialIcons from '../SocialIcons';
+import SocialIcons from '../socialicons';
 const shoulders = Big_Shoulders_Text({ subsets: ["latin"]});
 
 const Profile = () => {
@@ -31,11 +31,11 @@ const Profile = () => {
         </div>
       </div>
       <p className="text-xl leading-normal text-center">
-        Hey! I&apos;m a frontend developer based in Belgrade, Serbia. I enjoy coding things from the
-        ground up and seeing my ideas come to life in the browser! Because of my engineering
-        background, I&apos;m used to dealing with complex problems, and breaking them down into
-        simple, straightforward solutions. I am open to new opportunities or people to share ideas
-        with! Please, do not hesitate to contact me!
+        Hey! I&apos;m a frontend developer based in Belgrade, Serbia.
+        <br />
+        I enjoy coding things from the ground up and seeing my ideas come to life in the browser!
+        <br />
+        Let's build something great together!
       </p>
       <a href='German Dojcinovic.pdf' download="German Dojcinovic Resume.pdf" className="no-underline">
         <button className="hover:pointer hover:bg-paleGold hover:text-dark transition-all duration-300 ease-in-out gap-3 text-xl px-6 py-4 font-medium flex justify-center items-center bg-transparent border-2 border-solid border-paleGold rounded text-paleGold">
