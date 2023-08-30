@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         paleGold: '#f8efd4',
         dark: '#1b1b1b',
+        mediumDark: '#444444',
       },
     },
   },

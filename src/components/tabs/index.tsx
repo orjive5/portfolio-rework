@@ -11,26 +11,10 @@ import TabSwitch from '../tabSwitch';
 // import { ContactUs } from './ContactUs';
 
 const Tabs = () => {
-  // const [activeTab, setActiveTab] = useState('Projects');
-
-  // const setTab = (event) => {
-  //   setActiveTab(event.target.innerText);
-  // };
 
   return (
     <main>
       <TabSwitch />
-      {/* <div className="tabs">
-        <h1 className={activeTab === 'Projects' ? 'active-tab' : ''} onClick={setTab}>
-          Projects
-        </h1>
-        <h1 className={activeTab === 'Skills' ? 'active-tab' : ''} onClick={setTab}>
-          Skills
-        </h1>
-        <h1 className={activeTab === 'Contact' ? 'active-tab' : ''} onClick={setTab}>
-          Contact
-        </h1>
-      </div> */}
       {/* <div
         className={activeTab === 'Projects' ? 'display-tab display-projects' : 'display-projects'}>
         <Project
@@ -264,10 +248,6 @@ export default Tabs;
 //   align-items: center;
 //   gap: 2rem;
 //   margin-bottom: 2rem;
-// }
-
-// .active-tab {
-//   background-color: #444444;
 // }
 
 // .display-projects,
