@@ -2,7 +2,7 @@ import { mdiArrowCollapseDown} from '@mdi/js';
 import Icon from '@mdi/react';
 import Image from 'next/image';
 import { Big_Shoulders_Text } from 'next/font/google'
-import SocialIcons from '../socialicons';
+import SocialIcons from '../socialIcons';
 const shoulders = Big_Shoulders_Text({ subsets: ["latin"]});
 
 const Profile = () => {

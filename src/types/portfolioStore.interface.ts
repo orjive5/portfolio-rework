@@ -1,4 +1,6 @@
 export interface IPortfolioStore {
-    bears: number
-    increase: (by: number) => void
+    activeTab: string,
+    switchTab(activeTab: string): {
+      activeTab: string;
+    };
   }
