@@ -6,6 +6,7 @@ import SocialIcons from '../socialicons';
 const shoulders = Big_Shoulders_Text({ subsets: ["latin"]});
 
 const Profile = () => {
+
   return (
     <div className="mx-8 flex flex-col gap-12 items-center max-w-2xl">
       <div className="flex flex-col items-center gap-8 md:flex-row">
@@ -31,13 +32,19 @@ const Profile = () => {
         </div>
       </div>
       <p className="text-xl leading-normal text-center">
-        Hey! I&apos;m a frontend developer based in Belgrade, Serbia.
+        Hey there!
+        <br />
+        I&apos;m a frontend developer based in Belgrade, Serbia.
         <br />
         I enjoy coding things from the ground up and seeing my ideas come to life in the browser!
         <br />
         Let's build something great together!
       </p>
-      <a href='German Dojcinovic.pdf' download="German Dojcinovic Resume.pdf" className="no-underline">
+      <a
+        href='German Dojcinovic.pdf'
+        download="German Dojcinovic Resume.pdf"
+        className="no-underline"
+      >
         <button className="hover:pointer hover:bg-paleGold hover:text-dark transition-all duration-300 ease-in-out gap-3 text-xl px-6 py-4 font-medium flex justify-center items-center bg-transparent border-2 border-solid border-paleGold rounded text-paleGold">
           Download CV
           <Icon
