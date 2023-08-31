@@ -10,14 +10,16 @@ const Profile = () => {
   return (
     <div className="mx-8 flex flex-col gap-8 items-center max-w-2xl">
       <div className="flex flex-col items-center gap-8 md:flex-row">
-        <Image
-          src="/profile-pic.jpg"
-          alt="Profile pic"
-          priority={true}
-          width={224}
-          height={224}
-          className="object-cover box-border border-4 border-paleGold overflow-hidden w-56 h-56 rounded-full"
-        />
+        <div className='relative w-56 h-56'>
+          <Image
+            src="/profile-pic.jpg"
+            alt="Profile pic"
+            priority={true}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover box-border border-4 border-paleGold overflow-hidden rounded-full"
+          />
+        </div>
         <div className="flex flex-col gap-4 items-center md:items-start">
           <h1
             style={shoulders.style}
