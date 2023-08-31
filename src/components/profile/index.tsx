@@ -8,7 +8,7 @@ const shoulders = Big_Shoulders_Text({ subsets: ["latin"]});
 const Profile = () => {
 
   return (
-    <div className="mx-8 flex flex-col gap-12 items-center max-w-2xl">
+    <div className="mx-8 flex flex-col gap-8 items-center max-w-2xl">
       <div className="flex flex-col items-center gap-8 md:flex-row">
         <Image
           src="/profile-pic.jpg"
@@ -16,7 +16,7 @@ const Profile = () => {
           priority={true}
           width={224}
           height={224}
-          className="object-cover box-border border-4 border-solid border-paleGold overflow-hidden w-56 h-56 rounded-full"
+          className="object-cover box-border border-4 border-paleGold overflow-hidden w-56 h-56 rounded-full"
         />
         <div className="flex flex-col gap-4 items-center md:items-start">
           <h1

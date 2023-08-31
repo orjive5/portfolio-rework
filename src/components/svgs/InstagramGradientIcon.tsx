@@ -1,6 +1,15 @@
+'use client'
+
 export const InstagramGradientIcon = () => {
   return (
     <svg
+        onClick={() =>
+            window.open(
+            'https://www.instagram.com/germandojcinovic/',
+            '_blank',
+            'noopener,noreferrer'
+            )
+        }
         className="absolute right-0 -z-10 hover:z-10 transition-all duration-300 ease-in-out w-9 h-9 cursor-pointer"
         xmlns="http://www.w3.org/2000/svg"
         x="0px"

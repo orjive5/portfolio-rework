@@ -1,53 +1,36 @@
+'use client'
 
 // import './Main.css';
-// import Project from './Project';
-import MirProductionScreenshot from '../assets/mir-production.png';
-import UrbexScreenshot from '../assets/urbex.png';
-import SpaceTravelCalculatorScreenshot from '../assets/space-travel-calculator.png';
-import CurrencyConverterScreenshot from '../assets/currency-converter.png';
 import Icon from '@mdi/react';
 import { mdiLinkedin, mdiGithub, mdiInstagram, mdiGmail, mdiCellphone } from '@mdi/js';
 import TabSwitch from '../tabSwitch';
+import Project from '../project';
+import { usePortfolioStore } from '@/store';
 // import { ContactUs } from './ContactUs';
+import { projectsData } from '../../constants/projectsData'
 
 const Tabs = () => {
 
+  const store = usePortfolioStore();
+
   return (
-    <main>
+    <main className='flex flex-grow flex-col items-center gap-8'>
       <TabSwitch />
-      {/* <div
-        className={activeTab === 'Projects' ? 'display-tab display-projects' : 'display-projects'}>
-        <Project
-          screenshot={SpaceTravelCalculatorScreenshot}
-          name="Space Travel Calculator"
-          description="Calculate the time required for interplanetary or interstellar travel. Built with ReactJS and TailwindCSS."
-          demo="https://cheerful-selkie-cf0525.netlify.app/"
-          code="https://github.com/orjive5/space-travel-calculator"
-        />
-        <Project
-          screenshot={MirProductionScreenshot}
-          name="MirProduction Portfolio"
-          description="Porfolio website for MirProduction. Built with ReactJS and TailwindCSS."
-          demo="https://mirproduction.com/"
-          code="https://github.com/orjive5/space-travel-calculator"
-        />
-        <Project
-          screenshot={CurrencyConverterScreenshot}
-          name="Currency Converter"
-          description="Currency converter app developed with ReactJS and TailwindCSS."
-          demo="https://preeminent-tarsier-55e78f.netlify.app/"
-          code="https://github.com/orjive5/currency-converter"
-        />
-        <Project
-          screenshot={UrbexScreenshot}
-          name="UrbEx Social Media App"
-          description="Map based social media app where users can
-          share and review urban exploration sites."
-          demo=""
-          code=""
-          wip={true}
-        />
-      </div> */}
+      {store.activeTab === 'Projects' && (
+        <div className='grid grid-cols-2 grid-rows-2 gap-8'>
+          {projectsData.map(p => {
+            return (
+              <Project
+                screenshot={p.screenshot}
+                name={p.name}
+                description={p.description}
+                demo={p.demo}
+                code={p.code}
+              />
+            )
+          })}
+        </div>
+      )}
       {/* <div className={activeTab === 'Skills' ? 'display-tab display-skills' : 'display-skills'}>
         <div className="skills-technical">
           <div className="skills-card frontend-skills">
@@ -241,15 +224,6 @@ const Tabs = () => {
 
 export default Tabs;
 
-// main {
-//   flex-grow: 1;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   gap: 2rem;
-//   margin-bottom: 2rem;
-// }
-
 // .display-projects,
 // .display-skills,
 // .display-contact {
@@ -258,13 +232,6 @@ export default Tabs;
 
 // .display-tab {
 //   display: block;
-// }
-
-// .display-projects.display-tab {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   grid-template-rows: 1fr 1fr;
-//   gap: 2rem;
 // }
 
 // .display-skills.display-tab {
