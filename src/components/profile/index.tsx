@@ -1,8 +1,7 @@
-import { mdiArrowCollapseDown} from '@mdi/js';
-import Icon from '@mdi/react';
 import Image from 'next/image';
 import { Big_Shoulders_Text } from 'next/font/google'
 import SocialIcons from '../socialIcons';
+import DownloadIcon from '../svgs/DownloadIcon';
 const shoulders = Big_Shoulders_Text({ subsets: ["latin"]});
 
 const Profile = () => {
@@ -47,14 +46,9 @@ const Profile = () => {
         download="German Dojcinovic Resume.pdf"
         className="no-underline"
       >
-        <button className="hover:pointer hover:bg-paleGold hover:text-dark transition-all duration-300 ease-in-out gap-3 text-xl px-6 py-4 font-medium flex justify-center items-center bg-transparent border-2 border-solid border-paleGold rounded text-paleGold">
+        <button className="group hover:pointer hover:bg-paleGold hover:text-dark transition-all duration-300 ease-in-out gap-3 text-xl px-6 py-4 font-medium flex justify-center items-center bg-transparent border-2 border-solid border-paleGold rounded text-paleGold">
           Download CV
-          <Icon
-            path={mdiArrowCollapseDown}
-            title="Download"
-            size="22px"
-            className="hover:fill-dark"
-          />
+          <DownloadIcon iconStyling='transition-all duration-300 ease-in-out group-hover:fill-dark w-6 fill-paleGold'/>
         </button>
       </a>
     </div>

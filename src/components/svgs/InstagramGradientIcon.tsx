@@ -18,6 +18,7 @@ export const InstagramGradientIcon = () => {
         height="100"
         viewBox="0 0 24 24"
     >
+        <title>Instagram</title>
         <defs>
             <radialGradient id="instagramGradient" r="150%" cx="30%" cy="107%">
                 <stop stopColor="#fdf497" offset="0" />

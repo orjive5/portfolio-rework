@@ -1,8 +1,8 @@
-import Icon from '@mdi/react';
-import { mdiEye, mdiXml } from '@mdi/js';
 import { IProject } from '@/types/project.interface';
 import Image from 'next/image';
 import { Big_Shoulders_Text } from 'next/font/google'
+import EyeIcon from '../svgs/EyeIcon';
+import CodeIcon from '../svgs/CodeIcon';
 const shoulders = Big_Shoulders_Text({ subsets: ["latin"]});
 
 const Project = ({ screenshot, name, description, demo, code }: IProject) => {
@@ -29,22 +29,14 @@ const Project = ({ screenshot, name, description, demo, code }: IProject) => {
                 className='group hover:bg-paleGold hover:text-black flex items-center gap-1 transition-all duration-300 ease-in-out cursor-pointer rounded text-xl font-medium py-1 px-5 bg-transparent border border-paleGold'
                 onClick={() => window.open(demo, '_blank', 'noopener,noreferrer')}
             >
-                <Icon
-                    path={mdiEye}
-                    title="Demo icon"
-                    className="group-hover:text-black text-paleGold w-5 transition-all duration-300 ease-in-out"
-                />
+                <EyeIcon iconStyling='group-hover:fill-black fill-paleGold w-5 transition-all duration-300 ease-in-out' />
                 Demo
             </button>
             <button
                 className='group hover:bg-paleGold hover:text-black flex items-center gap-1 transition-all duration-300 ease-in-out cursor-pointer rounded text-xl font-medium py-1 px-5 bg-transparent border border-paleGold'
                 onClick={() => window.open(code, '_blank', 'noopener,noreferrer')}
             >
-                <Icon
-                    path={mdiXml}
-                    title="Code icon"
-                    className="group-hover:text-black text-paleGold w-5 transition-all duration-300 ease-in-out"
-                />
+                <CodeIcon iconStyling='group-hover:fill-black fill-paleGold w-5 transition-all duration-300 ease-in-out' />
                 Code
             </button>
         </div>

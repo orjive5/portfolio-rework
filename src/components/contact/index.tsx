@@ -1,7 +1,7 @@
-import Icon from '@mdi/react';
-import { mdiGmail, mdiCellphone } from '@mdi/js';
 import { Big_Shoulders_Text } from 'next/font/google'
 import SocialIcons from '../socialIcons';
+import GmailIcon from '../svgs/GmailIcon';
+import CellphoneIcon from '../svgs/CellphoneIcon';
 const shoulders = Big_Shoulders_Text({ subsets: ["latin"]});
 
 const Contact = () => {
@@ -18,21 +18,13 @@ const Contact = () => {
         <SocialIcons />
     </div>
     <div className='flex items-start md:items-center gap-4'>
-        <Icon
-            path={mdiGmail}
-            title="Gmail"
-            className="w-9"
-        />
+        <GmailIcon />
         <h2 style={shoulders.style} className='text-xl md:text-3xl'>
             germandoicinovic@gmail.com
         </h2>
     </div>
     <div className='flex items-start md:items-center gap-4'>
-        <Icon
-            path={mdiCellphone}
-            title="Phone"
-            className="w-9"
-        />
+        <CellphoneIcon />
         <h2 style={shoulders.style} className='text-xl md:text-3xl'>
             +381 66 559 44 39
         </h2>
