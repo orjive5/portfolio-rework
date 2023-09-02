@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .instagram-gradient {
-    fill: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-} */
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #000000;
+  -webkit-text-fill-color: #f8efd4;
+  -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
+  box-shadow: 0 0 0px 1000px #000000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+  color: #f8efd4;
+}

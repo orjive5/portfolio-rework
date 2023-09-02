@@ -19,6 +19,7 @@ const Tabs = () => {
           {projectsData.map(p => {
             return (
               <Project
+                key={p.description}
                 screenshot={p.screenshot}
                 name={p.name}
                 description={p.description}

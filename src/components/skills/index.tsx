@@ -26,7 +26,7 @@ const Skills = () => {
             <div className="flex-col lg:flex-row flex gap-8 lg:items-start">
                 {skillsData.map(s => {
                     return (
-                        <div className="flex-col gap-4 md:flex-row flex justify-between lg:justify-center lg:flex-col items-center md:gap-8 lg:gap-4">
+                        <div key={s.skillType} className="flex-col gap-4 md:flex-row flex justify-between lg:justify-center lg:flex-col items-center md:gap-8 lg:gap-4">
                             <h1 style={shoulders.style} className='text-3xl'>
                                 {s.skillType}
                             </h1>
@@ -34,7 +34,7 @@ const Skills = () => {
                                 {s.skillList.map(skill => {
                                     const Icon = skill.icon;
                                     return (
-                                        <div className="flex flex-col gap-2 items-center">
+                                        <div key={skill.title} className="flex flex-col gap-2 items-center">
                                             <Icon />
                                             <h2>{skill.title}</h2>
                                         </div>
