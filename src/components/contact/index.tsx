@@ -7,7 +7,7 @@ const shoulders = Big_Shoulders_Text({ subsets: ["latin"]});
 
 const Contact = () => {
   return (
-    <div className='flex flex-col items-center gap-4 sm:gap-8'>
+    <div className='w-full flex flex-col items-center gap-4 sm:gap-8'>
         <h2 style={shoulders.style} className='text-2xl md:text-3xl'>
             Feel free to send me a message:
         </h2>
