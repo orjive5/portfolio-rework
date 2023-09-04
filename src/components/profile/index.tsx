@@ -35,7 +35,7 @@ const Profile = () => {
       <p className="text-base sm:text-xl leading-normal text-center">
         Hey there!{' '}
         <br className='hidden md:block' />
-        I&apos;m a frontend developer based in Belgrade, Serbia.{' '}
+        I'm a frontend developer based in Belgrade, Serbia.{' '}
         <br className='hidden md:block' />
         I enjoy coding things from the ground up and seeing my ideas come to life in the browser!{' '}
         <br className='hidden lg:block' />
