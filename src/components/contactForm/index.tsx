@@ -37,7 +37,8 @@ export const ContactForm = () => {
         (result) => {
           // success message
           console.log(result.text);
-          setSubmitSuccess(true)
+          setSubmitSuccess(true);
+          reset();
           const timer = setTimeout(() => {
             setSubmitSuccess(false)
           }, 3000);
@@ -49,11 +50,11 @@ export const ContactForm = () => {
       );
   };
 
-  useEffect(() => {
-    if(isSubmitSuccessful) {
-      reset()
-    }
-  }, [isSubmitSuccessful, reset]);
+  // useEffect(() => {
+  //   if(isSubmitSuccessful) {
+  //     reset()
+  //   }
+  // }, [isSubmitSuccessful, reset]);
 
   return (
       <form
@@ -103,7 +104,7 @@ export const ContactForm = () => {
           </p>
         }
         <input
-          className="border-0 rounded-lg p-4 bg-black text-paleGold text-xl hover:bg-paleGold hover:text-black self-center cursor-pointer font-medium rounded transition-all duration-300 ease-in-out"
+          className="border-0 rounded-md p-4 bg-black text-paleGold text-xl hover:bg-paleGold hover:text-black self-center cursor-pointer font-medium rounded transition-all duration-300 ease-in-out"
           type="submit"
           value="Send message"
         />

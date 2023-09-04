@@ -7,7 +7,7 @@ const shoulders = Big_Shoulders_Text({ subsets: ["latin"]});
 
 const Project = ({ screenshot, name, description, demo, code }: IProject) => {
   return (
-    <div className="border-2 border-paleGold overflow-hidden rounded-2xl max-w-xs min-h-[500px] flex flex-col gap-4 justify-start items-center bg-black">
+    <div className="border-2 border-paleGold overflow-hidden rounded-2xl w-full sm:w-[400px] md:max-w-xs min-h-[500px] flex flex-col gap-4 justify-start items-center bg-black">
         <div className='relative h-80 w-full'>
             <Image
                 src={screenshot}

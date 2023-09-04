@@ -15,7 +15,7 @@ const Tabs = () => {
     <main className='flex flex-grow flex-col items-center gap-8'>
       <TabSwitch />
       {store.activeTab === 'Projects' && (
-        <div className='grid grid-cols-2 grid-rows-2 gap-8'>
+        <div className='grid grid-cols-1 justify-items-center md:grid-cols-2 md:grid-rows-2 gap-8'>
           {projectsData.map(p => {
             return (
               <Project
