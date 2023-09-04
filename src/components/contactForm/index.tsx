@@ -1,11 +1,13 @@
 'use client'
 
+import { usePortfolioStore } from '@/store';
 import { FormInputs } from '@/types/formInputs.interface';
 import emailjs from '@emailjs/browser';
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 
 export const ContactForm = () => {
+  const store = usePortfolioStore();
   // REACT HOOK FORM
   const {
     register,
@@ -25,7 +27,9 @@ export const ContactForm = () => {
   const emailForm = useRef<any>(null);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const submitForm = (data: FormInputs) => {
+  const submitForm = () => {
+    store.setLoading(true);
+
     emailjs
       .sendForm(
         'service_yggwauk',
@@ -35,7 +39,7 @@ export const ContactForm = () => {
       )
       .then(
         (result) => {
-          // success message
+          store.setLoading(false);
           console.log(result.text);
           setSubmitSuccess(true);
           reset();
@@ -50,20 +54,14 @@ export const ContactForm = () => {
       );
   };
 
-  // useEffect(() => {
-  //   if(isSubmitSuccessful) {
-  //     reset()
-  //   }
-  // }, [isSubmitSuccessful, reset]);
-
   return (
       <form
         ref={emailForm}
         onSubmit={handleSubmit(submitForm)}
-        className="w-full flex flex-col gap-4"
+        className={`${store.loading && 'cursor-wait'} w-full flex flex-col gap-2 sm:gap-4`}
       >
         <input
-          className="placeholder-[#999] focus:outline outline-paleGold border-0 rounded-lg p-4 bg-black text-paleGold text-xl"
+          className={`${store.loading && 'cursor-wait'} placeholder-[#999] focus:outline outline-paleGold border-0 rounded sm:rounded-lg p-2 sm:p-4 bg-black text-paleGold text-base sm:text-xl`}
           type="text"
           {...register("name", {required: 'Name is required.' })}
           placeholder="Name"
@@ -72,7 +70,7 @@ export const ContactForm = () => {
           {errors.name?.message}
         </p>
         <input
-          className="placeholder-[#999] focus:outline outline-paleGold border-0 rounded-lg p-4 bg-black text-paleGold text-xl"
+          className={`${store.loading && 'cursor-wait'} placeholder-[#999] focus:outline outline-paleGold border-0 rounded sm:rounded-lg p-2 sm:p-4 bg-black text-paleGold text-base sm:text-xl`}
           type="email"
           {...register("email", {required: 'Email is required.'})}
           placeholder="Email"
@@ -81,7 +79,7 @@ export const ContactForm = () => {
           {errors.email?.message}
         </p>
         <input
-          className="placeholder-[#999] focus:outline outline-paleGold border-0 rounded-lg p-4 bg-black text-paleGold text-xl"
+          className={`${store.loading && 'cursor-wait'} placeholder-[#999] focus:outline outline-paleGold border-0 rounded sm:rounded-lg p-2 sm:p-4 bg-black text-paleGold text-base sm:text-xl`}
           type="text"
           {...register("subject", {required: 'Subject is required.'})}
           placeholder="Subject"
@@ -90,7 +88,7 @@ export const ContactForm = () => {
           {errors.subject?.message}
         </p>
         <textarea
-          className="placeholder-[#999] focus:outline outline-paleGold border-0 rounded-lg p-4 bg-black text-paleGold text-xl"
+          className={`${store.loading && 'cursor-wait'} placeholder-[#999] focus:outline outline-paleGold border-0 rounded sm:rounded-lg p-2 sm:p-4 bg-black text-paleGold text-base sm:text-xl`}
           {...register("message", {required: 'Message is required.', minLength: {value: 4, message: 'Min message length is 4.'}})}
           placeholder="Your message"
         />
@@ -99,12 +97,12 @@ export const ContactForm = () => {
         </p>
         {
           submitSuccess && 
-          <p className="text-center text-xl">
+          <p className="text-center text-base sm:text-xl">
             Message sent successfully.
           </p>
         }
         <input
-          className="border-0 rounded-md p-4 bg-black text-paleGold text-xl hover:bg-paleGold hover:text-black self-center cursor-pointer font-medium rounded transition-all duration-300 ease-in-out"
+          className={`${store.loading && 'cursor-wait'} border-0 rounded sm:rounded-md p-2 sm:p-4 bg-black text-paleGold text-base sm:text-xl hover:bg-paleGold hover:text-black self-center cursor-pointer font-normal sm:font-medium rounded transition-all duration-300 ease-in-out`}
           type="submit"
           value="Send message"
         />

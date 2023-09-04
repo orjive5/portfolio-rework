@@ -10,7 +10,7 @@ export const InstagramGradientIcon = () => {
             'noopener,noreferrer'
             )
         }
-        className="absolute right-0 -z-10 hover:z-10 transition-all duration-300 ease-in-out w-9 h-9 cursor-pointer"
+        className="absolute right-0 -z-10 hover:z-10 transition-all duration-300 ease-in-out w-7 h-7 sm:w-9 sm:h-9 cursor-pointer"
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
         y="0px"
