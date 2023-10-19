@@ -1,15 +1,15 @@
-import Qualion from '../assets/images/qualion.png';
+import EuropeOpen from '../assets/images/europe-open.png';
 import SpaceTravel from '../assets/images/space-travel-calculator.png';
 import MirProduction from '../assets/images/mir-production.png';
 import PersonalPortfolio from '../assets/images/personal-portfolio.png';
 
 export const projectsData = [
     {
-        screenshot: Qualion,
-        name: 'Qualion',
-        description: 'Science & AI news blog concept developed with NextJS, Sanity CMS and TailwindCSS.',
-        demo: "https://sanity-personal-website-nu.vercel.app/",
-        code: "https://github.com/orjive5/qualion-sanity.git",
+        screenshot: EuropeOpen,
+        name: 'Europe Open',
+        description: 'A platform where music students from around the world submit their performance videos for evaluation by a professional jury.',
+        demo: "https://europe-open.vercel.app/",
+        code: "https://github.com/orjive5/europe-open.git",
     },
     {
         screenshot: SpaceTravel,
