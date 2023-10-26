@@ -5,17 +5,17 @@ import EyeIcon from '../svgs/EyeIcon';
 import CodeIcon from '../svgs/CodeIcon';
 const shoulders = Big_Shoulders_Text({ subsets: ["latin"]});
 
-const Project = ({ screenshot, name, description, demo, code }: IProject) => {
+const Project = ({ screenshot, name, description, stack, demo, code }: IProject) => {
   return (
-    <div className="border sm:border-2 border-paleGold overflow-hidden rounded sm:rounded-2xl max-w-[400px] sm:w-[400px] md:max-w-xs h-auto sm:min-h-[500px] flex flex-col gap-2 sm:gap-4 justify-start items-center bg-black">
-        <div className='relative h-80 w-full'>
+    <section className="border sm:border-2 border-paleGold overflow-hidden rounded sm:rounded-2xl w-full lg:max-w-2xl h-auto sm:min-h-[500px] flex flex-col gap-2 sm:gap-4 justify-start items-center bg-black">
+        <div className="flex items-center justify-center relative h-96 w-full">
             <Image
                 src={screenshot}
-                priority
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                alt="Project screenshot"
-                className='object-cover'
+                width="0"
+                height="0"
+                sizes="100vw"
+                className="w-full h-full object-cover box-border overflow-hidden"
+                alt={description}
             />
         </div>
         <h1 style={shoulders.style} className='text-2xl sm:text-3xl'>
@@ -23,6 +23,9 @@ const Project = ({ screenshot, name, description, demo, code }: IProject) => {
         </h1>
         <p className='px-2 sm:px-4 text-base sm:text-xl text-center'>
             {description}
+        </p>
+        <p className='px-2 sm:px-4 text-base sm:text-xl text-center'>
+            Tech stack: {stack}
         </p>
         <div className="flex flex-wrap justify-center gap-2 px-2 mb-4 sm:gap-4 sm:px-4">
             <button
@@ -40,7 +43,7 @@ const Project = ({ screenshot, name, description, demo, code }: IProject) => {
                 Code
             </button>
         </div>
-    </div>
+    </section>
   );
 };
 

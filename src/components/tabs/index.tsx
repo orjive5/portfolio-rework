@@ -15,7 +15,7 @@ const Tabs = () => {
     <main className={`${store.loading && 'cursor-wait'} flex flex-grow flex-col items-center gap-4 sm:gap-8`}>
       <TabSwitch />
       {store.activeTab === 'Projects' && (
-        <div className='grid grid-cols-1 justify-items-center md:grid-cols-2 md:grid-rows-2 gap-4 sm:gap-8'>
+        <section className='flex flex-col gap-4 sm:gap-8'>
           {projectsData.map(p => {
             return (
               <Project
@@ -23,12 +23,13 @@ const Tabs = () => {
                 screenshot={p.screenshot}
                 name={p.name}
                 description={p.description}
+                stack={p.stack}
                 demo={p.demo}
                 code={p.code}
               />
             )
           })}
-        </div>
+        </section>
       )}
       {store.activeTab === 'Skills' && <Skills />}
       {store.activeTab === 'Contact' && <Contact />}

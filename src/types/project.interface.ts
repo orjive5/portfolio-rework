@@ -4,6 +4,7 @@ export interface IProject {
     screenshot: string | StaticImageData,
     name: string,
     description: string,
+    stack: string,
     demo: string,
     code: string,
 }
